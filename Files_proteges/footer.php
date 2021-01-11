@@ -1,3 +1,4 @@
 <!-- Bas de page -->
-
-<p>Hello toi</p>
+<div class="footer">
+  <p>"Anyone can cook" </br> -Gusteau</p>
+</div>
