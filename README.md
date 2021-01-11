@@ -1,12 +1,12 @@
 # Fullstack Group Project - my.Bocuse
 
-made by [Florian BERTCHI](https://github.com/Bruxellesflorian), [Bérengère CARPENTIER](https://github.com/carpentierberengere), [Elise MULUMBA](https://github.com/elisemlbr) & [Igor DE SPIRLET](https://github.com/IgorDeSpi), trainees @ Becode.
+made by [Florian BERTCHI](https://github.com/Bruxellesflorian), [Bérengère CARPENTIER](https://github.com/carpentierberengere), [Elise MULUMBA](https://github.com/elisemlbr) & [Igor DE SPIRLET](https://github.com/IgorDeSpi), trainees @ :office: Becode.
 
 start date : 11/01/2021  
 end date : 14/01/2021  
 
-# myBocuses - what is it ?
-myBocuse is the website for the learners and chefs of the Bocuses's cooking bootcamp.
+# myBocuse - what is it ?
+myBocuse is the website for learners and chefs of the Bocuse's cooking bootcamp.
 
 Through this website, they can organise *The Recette* presentations and lock a slot to do it, register their arrival and departure time, and much more. 
 
