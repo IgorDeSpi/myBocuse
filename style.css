@@ -1,0 +1,64 @@
+main{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.bocuse_title{
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+/* Box avec le formulaire */
+.main_container{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    padding: 30px;
+    border: 1px solid black;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.title{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+input[type=email], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
