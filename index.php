@@ -28,7 +28,7 @@ catch (Exception $e)
     
     if(isset($_POST['email'])&& isset($_POST['pwd'])){
         
-        $request = $bdd->prepare('SELECT email ,pass FROM chef WHERE email=?');
+        $request = $bdd->prepare('SELECT email ,pass FROM mybocuse WHERE email=?');
         $request->execute([
             strip_tags(trim($_POST['email'])),
         ]);
@@ -51,11 +51,6 @@ catch (Exception $e)
             }
     }
 
-// $reponse = $bdd->query('SELECT pass,email FROM chef WHERE email=?');
-
-
-// include('./Files_proteges/header.php'); 
-// include('./Files_proteges/formulaire.php');
 ?>
 
 
