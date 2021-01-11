@@ -62,10 +62,9 @@
         </section>
     </main>
 
-    <footer>
-        <p class="citation">"mmmmmmhhhhh ok"</p>
-        <p class="artiste">Kelian Christophe </p>
-    </footer>
+   <?php  include('./Files_proteges/footer.php'); ?>
+
+   
 </body>
 
 </html>
