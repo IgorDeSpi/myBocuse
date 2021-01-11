@@ -1,3 +1,14 @@
+<?php
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +24,31 @@
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
 </head>
 <body>
+<?php 
+    if(isset($_POST['email'])&& isset($_POST['password'])){
+        $request = $bdd->prepare('SELECT id, first_name,last_name,pass,email FROM chef WHERE email=?');
+    }
+$request->execute([
+    strip_tags(trim($_POST['email'])),
+]);
+    $data = $request ->fetch();
+        if($data['pass'] === $_POST['password']){
+            $_SESSION['email'] = $data['email'];
+            $_SESSION['pass'] = $data['pass'];
+        }
+        $request->closeCursor();
 
-<!-- Header -->
-<?php  include('./Files_proteges/header.php'); ?>
+        if($_SESSION){
+        }
+        else {
+            // Header 
+            include('./Files_proteges/header.php'); 
+            // Main 
+            include('./Files_proteges/formulaire.php');
+        }
+?>
 
 
-
-<!-- Main -->
-
-<?php include('./Files_proteges/formulaire.php'); ?>
 
 
 <!-- Footer -->
@@ -30,4 +57,5 @@
 
     
 </body>
+
 </html>
