@@ -1,8 +1,8 @@
 <!-- Navbar -->
 <div class="header">
-<a href="#default" class="logo"><img src="./logo.png" height=60px width=60px></a>
+<a href="#default" class="logo zoom_logo"><img src="./logo.png" height=80px width=80px></a>
   <div class="header-right">
-    <a class="active" href="#login">Login</a>
-    <a href="#contact">Contact</a>
+    <div class="zoom_login"><a class="active padding_box " href="#login">Login</a></div>
+    <div class="zoom_contact"><a class="padding_box " href="#contact">Contact</a></div>
   </div>
 </div> 
