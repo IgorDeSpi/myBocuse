@@ -1,8 +1,9 @@
+/* Bloc Titre et formulaire */
 main{
     font-family: 'Roboto', sans-serif;
 }
 
-
+/* Titre My.Bocuse */
 .bocuse_title{
     font-size: 300%;
     display: flex;
@@ -46,7 +47,7 @@ input[type=email], input[type=password]{
 }
 
 input[type=submit] {
-    background-color: #53af57;
+    background-color:rgb(14, 79, 145);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -59,8 +60,8 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    color: rgb(14, 79, 145);
+    border: 1px solid rgb(14, 79, 145);
 }
 
 /* header et footer */
