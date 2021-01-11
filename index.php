@@ -25,27 +25,37 @@ catch (Exception $e)
 </head>
 <body>
 <?php 
-    if(isset($_POST['email'])&& isset($_POST['password'])){
-        $request = $bdd->prepare('SELECT id, first_name,last_name,pass,email FROM chef WHERE email=?');
+    
+    if(isset($_POST['email'])&& isset($_POST['pwd'])){
+        
+        $request = $bdd->prepare('SELECT email ,pass FROM chef WHERE email=?');
+        $request->execute([
+            strip_tags(trim($_POST['email'])),
+        ]);
+        $data = $request ->fetch();
+            if($data['pass'] === $_POST['pwd']){
+                $_SESSION['email'] = $data['email'];
+                $_SESSION['pass'] = $data['pass'];
+            }else if(['pass'])
+            $request->closeCursor();
+    
+            if($_SESSION){
+                include('./Files_proteges/header.php'); 
+                include('./Files_proteges/loginpage.php');
+            }
+            else {
+                // Header 
+                include('./Files_proteges/header.php'); 
+                include('./Files_proteges/formulaire.php');
+                // Main 
+            }
     }
-$request->execute([
-    strip_tags(trim($_POST['email'])),
-]);
-    $data = $request ->fetch();
-        if($data['pass'] === $_POST['password']){
-            $_SESSION['email'] = $data['email'];
-            $_SESSION['pass'] = $data['pass'];
-        }
-        $request->closeCursor();
 
-        if($_SESSION){
-        }
-        else {
-            // Header 
-            include('./Files_proteges/header.php'); 
-            // Main 
-            include('./Files_proteges/formulaire.php');
-        }
+// $reponse = $bdd->query('SELECT pass,email FROM chef WHERE email=?');
+
+
+// include('./Files_proteges/header.php'); 
+// include('./Files_proteges/formulaire.php');
 ?>
 
 
