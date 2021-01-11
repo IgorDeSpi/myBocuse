@@ -1,0 +1,2 @@
+<!-- Navbar -->
+<p>Bonjour</p>
