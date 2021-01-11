@@ -64,7 +64,7 @@ input[type=submit]:hover {
     border: 1px solid rgb(14, 79, 145);
 }
 
-/* header et footer */
+/* Header */
 
 .header {
     overflow: hidden;
@@ -87,6 +87,7 @@ input[type=submit]:hover {
     font-size: 40px;
     font-weight: bold;
     font-family: 'Bodoni Moda', serif;
+    margin-left: 20px;
 }
 
 .header a:hover {
@@ -102,7 +103,19 @@ input[type=submit]:hover {
 .header-right {
     float: right;
 }
+/* Navbar effet zoom */
 
+
+.header a.active, .header-right > a:nth-child(2), .logo{
+    transform: scale(1);
+    transition: .3s ease-in-out;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.header a.active:hover, .header-right > a:nth-child(2):hover, .logo:hover {
+    transform: scale(1.2);
+}
+/* Responsiveness */
 @media screen and (max-width: 500px) {
     .header a {
       float: none;
@@ -114,6 +127,8 @@ input[type=submit]:hover {
     }
 } 
 
+
+/* Footer */
 .footer {
     position: fixed;
     left: 0;
