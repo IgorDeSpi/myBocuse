@@ -1,6 +1,9 @@
-/* Bloc Titre et formulaire */
-main{
+body{
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 }
 
 /* Titre My.Bocuse */
@@ -70,16 +73,17 @@ input[type=submit]:hover {
     overflow: hidden;
     background-color:  #4d4d4d;
     padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .header a {
-    float: left;
     color: black;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
     font-size: 18px;
-    line-height: 25px;
     border-radius: 4px;
 }
 
@@ -94,21 +98,28 @@ input[type=submit]:hover {
     color: white;
 }
 
-.header-right {
-    float: right;
+.padding_box{
+    padding: 12px;
 }
+
+.header-right{
+    display: flex;
+}
+
+
 /* Navbar effet zoom */
-
-
-.header a.active, .header-right > a:nth-child(2), .logo{
+.zoom_logo, .zoom_login, .zoom_contact{
     transform: scale(1);
     transition: .3s ease-in-out;
     margin-left: 5px;
     margin-right: 5px;
 }
-.header a.active:hover, .header-right > a:nth-child(2):hover, .logo:hover {
-    transform: scale(1.2);
+
+
+.zoom_logo:hover ,.zoom_login:hover, .zoom_contact:hover{
+    transform: scale(1.25);
 }
+
 /* Responsiveness */
 @media screen and (max-width: 500px) {
     .header a {
@@ -124,7 +135,6 @@ input[type=submit]:hover {
 
 /* Footer */
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -132,4 +142,7 @@ input[type=submit]:hover {
     color: white;
     text-align: center;
     font-family: 'Bodoni Moda', serif;
+}
+.footer > p:nth-child(2){
+    margin-bottom: 0px;
 }
