@@ -10,7 +10,7 @@
 
 <body>
 
-<?php  include('./Files_proteges/headerdashboard.php'); ?>
+<?php  include('./Files_proteges/header2.php'); ?>
 
     <main class ="dashboardmain">
 
@@ -51,7 +51,7 @@
                 <div class="user-box" id="messageLabel">
                     <label class="label">Description de la recette </label>
                     <textarea class="input" id='textarea' name="" required></textarea>
-                    <button>Envoyer</button>
+                    <button class="envoyerrecette">Envoyer</button>
                 </div>
             </form>
         </section>

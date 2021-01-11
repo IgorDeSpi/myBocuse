@@ -25,7 +25,17 @@ display: flex;
 justify-content: center;
 }
 
-
+button {
+    background-color:rgb(14, 79, 145);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 .heurepointage  {
     display: flex;
@@ -50,10 +60,21 @@ justify-content: space-between;
 }
 
 .recettes {
-    text-align: center;
     border:1px solid rgb(0, 0, 0);
+    border-radius: 5%; 
     box-sizing: border-box;
+    width: 40%;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 400px;
 }
+.envoyerrecette {
+    width: 30%;
+}
+
 .menuNav {
     display: flex;
     list-style: none;
