@@ -12,11 +12,12 @@
 
 <?php  include('./Files_proteges/headerdashboard.php'); ?>
 
-    <main>
+    <main class ="dashboardmain">
 
         <section class="pointage">
-
+<div class="pointage1">
             <h2>Pointage</h2>
+            <div class="pointage2">
             <div class="heurepointage">
                 <h3>Start</h3>
                 <button> 9:00</button>
@@ -25,6 +26,8 @@
                 <h3>End</h3>
                 <button>17:00</button>
             </div>
+            </div>
+        </div>
         </section>
 
 
