@@ -10,15 +10,7 @@
 
 <body>
 
-    <header>
-        <nav class="navBar">
-            <ul class="menuNav">
-                <li><a href="">Bertrand</a></li>
-                <li><a href="">Photo</a></li>
-                <li><a href="index.php">Disconnect</li></a>
-            </ul>
-        </nav>
-    </header>
+<?php  include('./Files_proteges/headerdashboard.php'); ?>
 
     <main>
 
@@ -64,7 +56,7 @@
 
    <?php  include('./Files_proteges/footer.php'); ?>
 
-   
+
 </body>
 
 </html>
