@@ -1,4 +1,4 @@
-<main>
+<!-- Formulaire dans le main -->
 <H1 class="bocuse_title">Welcome to My.Bocuse</H1>
 
 <div class="main_container">
@@ -26,4 +26,3 @@
 
     </form>
 </div>
-</main>
