@@ -23,6 +23,7 @@ catch (Exception $e)
     
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
 </head>
+
 <body>
 <?php 
     
@@ -51,27 +52,11 @@ catch (Exception $e)
             }
     }
 
-
+include('./Files_proteges/footer.php')
 ?>
 
-<!-- Header -->
-<header class="site-header">
-<?php  include('./Files_proteges/header.php'); ?>
-</header>
 
-
-<!-- Main -->
-<main class="site-content">
-<?php include('./Files_proteges/formulaire.php'); ?>
-</main>
-
-
-<!-- Footer -->
-<footer class="site-footer">
-<?php include('./Files_proteges/footer.php'); ?>
-</footer>
-
-    
+  
 </body>
 
 </html>
