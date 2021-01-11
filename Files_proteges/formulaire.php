@@ -14,7 +14,7 @@
         </p>
 
         <p>
-            <label for="pwd"><b>Passsword :</b></label>
+            <label for="pwd"><b>Password :</b></label>
             <input type="password" name="pwd" placeholder="Enter your password..."  />
         </p>
 
