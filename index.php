@@ -4,7 +4,7 @@ session_start();
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
 }
 catch (Exception $e)
 {
@@ -46,8 +46,8 @@ catch (Exception $e)
         }
 
         if(!empty($_SESSION)){
-            include('./Files_proteges/header.php'); 
-            include('./Files_proteges/loginpage.php');
+            include('./Files_proteges/header_login_page.php'); 
+            include('./Files_proteges/login_page.php');
 
 
             // include('./Files_proteges/logout.php');
