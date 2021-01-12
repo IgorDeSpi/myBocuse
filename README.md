@@ -26,7 +26,8 @@ First, we split the front end between two groups of two; the login page and the 
 * HTML/CSS
 * PHP
 * mySQL
-* Becode **Instructions** 
+* [Becode **Instructions**](https://github.com/becodeorg/bxl-hopper-1-25/tree/master/The%20Mountain/12.PHP/0.Projects/3.mybocuse)
 * Varied **documentation** from the internet
 * Website Host
 
+DISCLAIMER - fair use, this exercice is for educational purpose only. 
