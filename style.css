@@ -54,7 +54,7 @@ body{
 }
 
 form{
-    width: 100%;
+    margin: 40px;
     padding: 30px;
     border: 1px solid black;
     background: #fff;
@@ -89,7 +89,12 @@ input[type=submit] {
     font-weight: bold;
 }
 
-
+table{
+    text-align: left;
+}
+body > main > section.recettes > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > button{
+    width: fit-content;
+}
 .heurepointage  {
     display: flex;
     flex-direction: column;
@@ -116,13 +121,15 @@ justify-content: space-between;
     border:1px solid rgb(0, 0, 0);
     border-radius: 5%; 
     box-sizing: border-box;
-    width: 40%;
-    height: 60%;
+    width: fit-content;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:100px ;
 }
 .envoyerrecette {
     width: 30%;
