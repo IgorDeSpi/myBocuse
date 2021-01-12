@@ -1,8 +1,8 @@
 <?php
-session_start();
+// session_start();
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', '');
 }
 catch (Exception $e)
 {
@@ -43,13 +43,13 @@ catch (Exception $e)
             $request->closeCursor();
         }
         if($_SESSION){
-            include('./Files_proteges/header.php'); 
-            include('./Files_proteges/loginpage.php');
+            include('./Files_proteges/header_login_page.php'); 
+            include('./Files_proteges/login_page.php');
             // include('./Files_proteges/logout.php');
         }
         else {
             // Header 
-            include('./Files_proteges/header.php'); 
+            include('./Files_proteges/header_formulaire.php'); 
             // Main 
             include('./Files_proteges/formulaire.php');
         }
