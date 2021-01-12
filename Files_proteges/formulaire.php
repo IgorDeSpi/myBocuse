@@ -6,7 +6,7 @@
      
     
 
-    <form method="POST">
+    <form class="formulaire_connexion" method="POST">
         <h1 class="title">Login</h1>
 
         <p>
@@ -20,7 +20,7 @@
         </p>
 
         <p>
-            <input type="submit" value="Confirm" /> 
+            <input type="submit" id="confirm_connexion" value="Confirm" /> 
         </p>
 
 
