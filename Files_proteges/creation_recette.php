@@ -1,7 +1,18 @@
+<?php
+try
+{
+    
+    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+?>
 
 <section class="recettes">
         <h2>Ajouter une recette</h2>
-        <form method="post">
+        <form method="post" action="">
             <!-- <div class="divrecette"> -->
             <!-- <div class="user-box"> -->
             <table>
@@ -30,26 +41,14 @@
             </div> -->
         </form>
         <?php
-
-        // $bdd->exec('INSERT INTO recette(id_recette,user_recette,titre,recette) VALUE (NULL,"ok","ok","ok")');
-
                     if(isset($_POST['titre']) && isset($_POST['recette'])){
-                  
-
-                            // $dateTimeNaissance->createFromFormat('d/m/Y', $_POST['date']);
-                            // $dateNaissanceSQL = $dateTimeNaissance->format('Y-m-d');
-
-
-                            // $test = $_SESSION['email'];
-                            // $titre = $_POST['titre'];
-                            // $dateRecette = $_POST['dateRecette'];
-                            // $recette = $_POST['recette'];
-                     
-                            // $addRecette = $bdd->prepare('INSERT INTO `recette` (`id_recette`, `user_recette`, `date_recette`, `titre`, `recette`) VALUES (NULL, ?,?, ?,?);)');
-                            // $addRecette->execute(array($_SESSION['id'] ,$dateNaissanceSQL,$_POST['titre'],$_POST['recette']));
-
-                            $bdd->exec('INSERT INTO recette(id_recette,user_recette,titre,recette) VALUE (NULL,"ok","ok","ok")');
-                      
+                        // $titre = strip_tags(trim($_POST['titre']));
+                            $date = $_POST['date'];
+                            $test = $_SESSION['id'];
+                            $titre = $_POST['titre'];                           
+                            $recette = $_POST['recette'];
+                            $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette) VALUES (NULL, ?, ?, ?, ?)");
+                            $addRecette->execute(array($test,$date,$titre, $recette));
                     }
         ?>
     </section>
