@@ -4,7 +4,7 @@ session_start();
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
 }
 catch (Exception $e)
 {
@@ -43,6 +43,7 @@ catch (Exception $e)
                 $_SESSION['prenom'] = $data['first_name'];
                 $_SESSION['nom'] = $data['last_name'];
                 $_SESSION['statut'] = $data['statut'];
+                $_SESSION['id'] = $data['id'];
 
             }
             else if(['pass'])

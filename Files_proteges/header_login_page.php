@@ -10,7 +10,7 @@
 
 <header class="site-header">
     <div class="header">
-        <a href="#default" class="logo zoom_logo"><img src="./logo.png" height=80px width=80px></a>
+        <a href="index.php" class="logo zoom_logo"><img src="./logo.png" height=80px width=80px></a>
         <div class="header-right">
             <div class="zoom_login"><a href="#"><?php echo $_SESSION['email']; ?></a></div>
             <div class="zoom_contact"><a href="#">Photo</a></div>
