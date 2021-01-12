@@ -1,4 +1,5 @@
 <!-- Formulaire dans le main -->
+<main class="site-content">
 <H1 class="bocuse_title">Welcome to My.Bocuse</H1>
 
 <div class="main_container">
@@ -14,7 +15,7 @@
         </p>
 
         <p>
-            <label for="pwd"><b>Passsword :</b></label>
+            <label for="pwd"><b>Password :</b></label>
             <input type="password" name="pwd" placeholder="Enter your password..."  />
         </p>
 
@@ -26,3 +27,4 @@
 
     </form>
 </div>
+</main>

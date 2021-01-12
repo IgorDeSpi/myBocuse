@@ -1,3 +1,14 @@
+<?php
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,24 +23,40 @@
     
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
 </head>
+
 <body>
-
-<!-- Header -->
-<header class="site-header">
-<?php  include('./Files_proteges/header.php'); ?>
-</header>
-
-
-<!-- Main -->
-<main class="site-content">
-<?php include('./Files_proteges/formulaire.php'); ?>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-<?php include('./Files_proteges/footer.php'); ?>
-</footer>
-
+<?php 
     
+    if(isset($_POST['email'])&& isset($_POST['pwd'])){
+        
+        $request = $bdd->prepare('SELECT email ,pass FROM mybocuse WHERE email=?');
+        $request->execute([
+            strip_tags(trim($_POST['email'])),
+        ]);
+        $data = $request ->fetch();
+            if($data['pass'] === $_POST['pwd']){
+                $_SESSION['email'] = $data['email'];
+                $_SESSION['pass'] = $data['pass'];
+            }else if(['pass'])
+            $request->closeCursor();
+    
+            if($_SESSION){
+                include('./Files_proteges/header.php'); 
+                include('./Files_proteges/loginpage.php');
+            }
+            else {
+                // Header 
+                include('./Files_proteges/header.php'); 
+                include('./Files_proteges/formulaire.php');
+                // Main 
+            }
+    }
+
+include('./Files_proteges/footer.php')
+?>
+
+
+  
 </body>
+
 </html>
