@@ -26,20 +26,31 @@
     <section class="recettes">
         <h2>Ajouter une recette</h2>
         <form class="formulaire">
-            <div class="divrecette">
-                <div class="user-box">
-                    <label class="label">Nom de la recette</label>
-                    <input class="input" id="name" type="text" name="" required>
+            <!-- <div class="divrecette"> -->
+                <!-- <div class="user-box"> -->
+                <table>
+                <tr>
+                    <td><label class="label">Nom de la recette</label></td><td><input class="input" id="name" type="text" name="" required></td>
+                </tr>
+                <tr>
+                <td><label class="label">Date</label></td><td><input class="date" id="date" type="date" name="" required></td>
+                </tr>
+                <tr>
+                <td><label class="label">Description de la recette </label></td><td><textarea class="input" id='textarea' name="" required></textarea></td>
+                </tr>
+                <tr>
+                <td></td><td><button class="envoyerrecette">Envoyer</button></td>
+                </tr>
+                </table>
+                    
+                    
                 </div>
-                <div class="user-box">
-                    <label class="label">Date</label>
-                    <input class="date" id="date" type="date" name="" required>
-                </div>
+                <!-- <div class="user-box"></div> -->
             </div>
             <div class="user-box" id="messageLabel">
-                <label class="label">Description de la recette </label>
-                <textarea class="input" id='textarea' name="" required></textarea>
-                <button class="envoyerrecette">Envoyer</button>
+                
+                
+                
             </div>
         </form>
     </section>
