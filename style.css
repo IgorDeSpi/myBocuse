@@ -98,7 +98,7 @@ body > main > section.recettes > form > table > tbody > tr:nth-child(4) > td:nth
 .heurepointage  {
     display: flex;
     flex-direction: column;
-justify-content: space-between;
+    justify-content: space-between;
     margin-left: 40px;
 }
 

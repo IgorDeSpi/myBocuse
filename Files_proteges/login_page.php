@@ -2,6 +2,10 @@
 <main class="dashboardmain">
 <div class="pointage1">
 <?php   echo 'Bienvenu ', $_SESSION['statut'],' ',$_SESSION['prenom'],' ',$_SESSION['nom'];
+
+    if($_SESSION['statut'] === 'chef'){
+        // echo "bonjour CHEF ! ";   <--- Peut afficher des choses en plus
+    }
 ?>
 </div>
     <section class="pointage">
@@ -50,8 +54,6 @@
                 <!-- <div class="user-box"></div> -->
             </div>
             <!-- <div class="user-box" id="messageLabel">
-                
-                
                 
             </div> -->
         </form>
