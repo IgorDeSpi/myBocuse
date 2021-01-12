@@ -4,7 +4,7 @@
             <ul class="menuNav">
                 <li><a href="">Bertrand</a></li>
                 <li><a href="">Photo</a></li>
-                <li><a href="index.php">Disconnect</li></a>
+                <li><a href="logout.php">Disconnect</li></a>
             </ul>
         </nav>
     </header>
