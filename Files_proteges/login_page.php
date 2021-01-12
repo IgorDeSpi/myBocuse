@@ -1,7 +1,9 @@
 <!-- Page une fois loggé -->
-
 <main class="dashboardmain">
-
+<div class="pointage1">
+<?php   echo 'Bienvenu ', $_SESSION['statut'],' ',$_SESSION['prenom'],' ',$_SESSION['nom'];
+?>
+</div>
     <section class="pointage">
         <div class="pointage1">
             <h2>Pointage</h2>
@@ -25,7 +27,7 @@
 
     <section class="recettes">
         <h2>Ajouter une recette</h2>
-        <form class="formulaire">
+        <form>
             <!-- <div class="divrecette"> -->
                 <!-- <div class="user-box"> -->
                 <table>
@@ -47,11 +49,11 @@
                 </div>
                 <!-- <div class="user-box"></div> -->
             </div>
-            <div class="user-box" id="messageLabel">
+            <!-- <div class="user-box" id="messageLabel">
                 
                 
                 
-            </div>
+            </div> -->
         </form>
     </section>
 </main>
