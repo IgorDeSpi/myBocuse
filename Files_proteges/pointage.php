@@ -29,7 +29,7 @@
         }
     }
     $demande->closeCursor(); 
-    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    // $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         if($stop !== true){
             if(isset($_GET['pMatin'])){
                 $timestamp = date('h:i:s'); 
