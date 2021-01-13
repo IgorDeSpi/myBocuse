@@ -1,15 +1,14 @@
 <!-- Page une fois loggé -->
 <main class="dashboardmain">
     <div class="pointage1">
-        <?php   echo 'Bienvenu ', $_SESSION['statut'],' ',$_SESSION['prenom'],' ',$_SESSION['nom'];
-
-
-    if($_SESSION['statut'] === 'chef'){
-        // echo "bonjour CHEF ! ";   <--- Peut afficher des choses en plus
-    }
-
-?>
-
+        <?php   
+        // echo 'Bienvenu ', $_SESSION['statut'],' ',$_SESSION['prenom'],' ',$_SESSION['nom'];
+        if($_SESSION['statut'] === 'chef'){
+            echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';  
+        } else if($_SESSION['statut'] === 'learner'){
+            echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';   // Peut afficher des choses en plus
+            
+            ?>
     </div>
     <section class="pointage">
         <div class="pointage1">
@@ -26,10 +25,16 @@
             </div>
         </div>
     </section>
+            <?php
+         }
+        
+            ?>
+
     <section class="calendrier">
         <h2>Calendrier</h2>
 
     </section>
+
     <div class="flex">
                 <div class="boxRecette">
 
@@ -54,7 +59,7 @@
 <div class="recetteDJ">RECETTE DU JOur</div>
             </div>
         </div> 
-            </div>
+            </div> 
 
 <?php include('./Files_proteges/creation_recette.php'); ?>
 
