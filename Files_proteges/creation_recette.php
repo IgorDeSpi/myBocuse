@@ -31,7 +31,6 @@
 </div>
 
 <?php
-
                     if(isset($_POST['titre']) && isset($_POST['recette'])){
                         if(!empty($_POST['titre']) && !empty($_POST['recette'])){
                             // $titre = strip_tags(trim($_POST['titre']));
@@ -44,7 +43,6 @@
                                 $addRecette->execute(array($test,$date,$titre, $recette));
                         }
                     }
-        ?>
-
-    </section>
+?>
+</section>
 
