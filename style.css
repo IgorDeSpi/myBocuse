@@ -1,21 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;;
-}
-
-
-.navBar {
-    background-color: rgb(218, 218, 218);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    transition: top 0.3s;
-    z-index: 1;
-    
+    font-family: 'Roboto', sans-serif;
+    ;
 }
 .flex{
     display: flex;
@@ -31,24 +18,18 @@
     margin: 3px;
 }
 
-
-.pointage {
-border: 3px solid #fff;
-padding: 30px;
-display: flex;
-justify-content: center;
-}
-
-
-body{
+/* Body */
+body {
     margin: 0;
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
+
+
 
 /* Titre My.Bocuse */
-.bocuse_title{
+.bocuse_title {
     font-size: 300%;
     display: flex;
     justify-content: center;
@@ -57,16 +38,16 @@ body{
 }
 
 /* Box avec le formulaire */
-.main_container{
+.main_container {
     width: 600px;
     margin: 0 auto;
     margin-top: 5%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
-form{
+.formulaire_connexion {
     margin: 40px;
     padding: 30px;
     border: 1px solid black;
@@ -74,14 +55,16 @@ form{
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.title{
+
+.title {
     width: fit-content;
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
 }
 
-input[type=email], input[type=password]{
+input[type=email],
+input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -90,29 +73,37 @@ input[type=email], input[type=password]{
     box-sizing: border-box;
 }
 
-input[type=submit] {
-    background-color:rgb(14, 79, 145);
+#confirm_connexion {
+    background-color: rgb(14, 79, 145);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
     font-weight: bold;
 }
 
-table{
-    text-align: left;
+#confirm_connexion:hover {
+    background-color: white;
+    color: rgb(14, 79, 145);
+    border: 1px solid rgb(14, 79, 145);
 }
-body > main > section.recettes > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > button{
-    width: fit-content;
+
+/* Pointage */
+.pointage {
+    border: 3px solid #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
 }
-.heurepointage  {
+
+.heurepointage {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 40px;
+    margin: 0px 20px;
+
 }
 
 .pointage1 {
@@ -123,73 +114,96 @@ body > main > section.recettes > form > table > tbody > tr:nth-child(4) > td:nth
 
 .pointage2 {
     display: flex;
-    justify-content: space-around;
-}
-
-.calendrier {
-    text-align: center;
-}
-
-.recettes {
-    border:1px solid rgb(0, 0, 0);
-    border-radius: 5%; 
-    box-sizing: border-box;
-    width: fit-content;
-
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom:100px ;
-}
-.envoyerrecette {
-    width: 30%;
 }
 
-.menuNav {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-justify-content: space-evenly;
-    width: 100%;
+#bouton_pointage{
+    background-color: rgb(14, 79, 145);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 205px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.menuNav a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    
-}
-
-.menuNav li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 3%;
-}
-
-.dashboardmain {
-padding: 50px;
-}
-
-
-input[type=submit]:hover {
+#bouton_pointage:hover{
     background-color: white;
     color: rgb(14, 79, 145);
     border: 1px solid rgb(14, 79, 145);
 }
 
-/* Header */
+/* Calendrier */
+
+.calendrier {
+    text-align: center;
+}
+
+/* Formulaire recette */
+
+.main_container_recette {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.formulaire_recette {
+    margin: 40px;
+    padding: 30px;
+    border: 1px solid black;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.tableau_recette {
+    display: flex;
+    justify-content: center;
+}
+
+.nom_recette,
+.date_recette {
+    width: 200px;
+}
+
+.description {
+    max-height: 300px;
+    max-width: 300px;
+    min-width: 200px;
+    width: 200px;
+}
+
+#confirm_recette {
+    background-color: rgb(14, 79, 145);
+    color: white;
+    /* padding: 14px 20px;
+    margin: 8px 0; */
+    cursor: pointer;
+    width: 205px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#confirm_recette:hover {
+    background-color: white;
+    color: rgb(14, 79, 145);
+    border: 1px solid rgb(14, 79, 145);
+}
+
+
+
+
+
+/* Header - Navbar */
 
 .header {
     overflow: hidden;
-    background-color:  #4d4d4d;
+    background-color: #4d4d4d;
     padding: 20px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    margin-bottom: 10px;
 }
 
 .header a {
@@ -211,39 +225,39 @@ input[type=submit]:hover {
     color: white;
 }
 
-.padding_box{
+.padding_box {
     padding: 12px;
 }
 
-.header-right{
+.header-right {
     display: flex;
 }
 
 
 /* Navbar effet zoom */
-.zoom_logo, .zoom_login, .zoom_contact{
+.zoom {
     transform: scale(1);
     transition: .3s ease-in-out;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0px 10px;
 }
 
 
-.zoom_logo:hover ,.zoom_login:hover, .zoom_contact:hover{
+.zoom:hover {
     transform: scale(1.25);
 }
 
 /* Responsiveness */
 @media screen and (max-width: 500px) {
     .header a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
     }
+
     .header-right {
-      float: none;
+        float: none;
     }
-} 
+}
 
 
 /* Footer */
@@ -258,6 +272,7 @@ input[type=submit]:hover {
     font-family: 'Bodoni Moda', serif;
 
 }
-.footer > p:nth-child(2){
+
+.footer>p:nth-child(2) {
     margin-bottom: 0px;
 }
