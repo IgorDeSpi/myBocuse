@@ -24,17 +24,19 @@
     while($donnee = $demande->fetch())
     {
         if($donnee['jour'] == $jour ){
-            $matin = "Tu a pointé.";  
+            $matin = "Tu a pointé."; 
+            $stop = true; 
         }
     }
     $demande->closeCursor(); 
     $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-   
-        if(isset($_GET['pMatin'])){
-            $timestamp = date('h:i:s'); 
-            $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
-            $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));             
-        };     
+        if($stop !== true){
+            if(isset($_GET['pMatin'])){
+                $timestamp = date('h:i:s'); 
+                $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
+                $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));             
+            };     
+        }
     
     ?>
     <div class="pointMatin"><?php echo $matin; ?></div>
