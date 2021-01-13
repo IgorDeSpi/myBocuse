@@ -32,6 +32,7 @@
 
 <?php
 
+
     if(isset($_POST['titre']) && isset($_POST['recette'])){
         header('Location: index.php');
         if(!empty($_POST['titre']) && !empty($_POST['recette'])){
@@ -48,4 +49,5 @@
 ?>
 
     </section>
+
 
