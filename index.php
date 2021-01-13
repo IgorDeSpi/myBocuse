@@ -4,7 +4,9 @@ session_start();
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', '');
+
+    $bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+
 }
 catch (Exception $e)
 {
@@ -32,17 +34,19 @@ catch (Exception $e)
     
     if(isset($_POST['email'])&& isset($_POST['pwd'])){
      
-        $request = $bdd->prepare('SELECT email ,pass, first_name,last_name,statut FROM mybocuse WHERE email=?');
+        $request = $bdd->prepare('SELECT id,email ,pass, first_name,last_name,statut FROM mybocuse WHERE email=?');
         $request->execute([
             strip_tags(trim($_POST['email'])),
         ]);
         $data = $request ->fetch();
             if($data['pass'] === $_POST['pwd']){
+                $_SESSION['id'] = $data['id'];
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['pass'] = $data['pass'];
                 $_SESSION['prenom'] = $data['first_name'];
                 $_SESSION['nom'] = $data['last_name'];
                 $_SESSION['statut'] = $data['statut'];
+                
 
             }
             else if(['pass'])

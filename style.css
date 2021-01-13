@@ -4,6 +4,19 @@
     font-family: 'Roboto', sans-serif;
     ;
 }
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    border: solid black 1px;
+    margin: 3px;
+}
 
 /* Body */
 body {
@@ -90,6 +103,7 @@ input[type=password] {
     flex-direction: column;
     justify-content: space-between;
     margin: 0px 20px;
+
 }
 
 .pointage1 {
