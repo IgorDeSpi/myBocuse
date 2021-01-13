@@ -53,15 +53,7 @@ catch (Exception $e)
             $request->closeCursor();
             
 
-            $hashpwd = $datas['passwd'];
-            $verifypwd = password_verify($validpasswd, $hashpwd);
-            if (password_verify($password_inputted_by_user, $password_encrypted)) {
-                
-                echo 'Password Matches';
-            }else {
-                
-                echo 'Password Mismatch';
-            }
+            
             
     }
 
