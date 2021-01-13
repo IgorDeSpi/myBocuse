@@ -19,15 +19,23 @@ body {
 .boxRecette{
     width: fit-content;
     height: 500px;
-    margin: 0 auto;
     overflow: auto;
 
 }
 .boxTitre{
     border: solid black 1px;
-    width: 300px;
+    width: 400px;
     margin-bottom: 5px;
     padding: 3px;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+.recetteDJ{
+    width: 500px;
+    height: 500px;
+    border: solid black 1px;
 }
 
 
