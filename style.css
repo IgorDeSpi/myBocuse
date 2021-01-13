@@ -23,12 +23,14 @@ body {
 
 }
 .boxTitre{
+  
     border: solid black 1px;
     width: 400px;
     margin-bottom: 5px;
     padding: 3px;
 }
 .flex{
+ 
     display: flex;
     justify-content: space-evenly;
 }
@@ -37,7 +39,10 @@ body {
     height: 500px;
     border: solid black 1px;
 }
-
+.pointMatin{
+    width: fit-content
+    ;
+}
 
 /* Titre My.Bocuse */
 .bocuse_title {
