@@ -103,7 +103,7 @@ input[type=password] {
 
 /* Pointage */
 .pointage {
-    border: 3px solid #fff;
+    border: 3px solid rgb(255, 255, 255);
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -127,7 +127,18 @@ input[type=password] {
     display: flex;
     justify-content: center;
 }
+.no_status{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
 
+.div_statut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
 #bouton_pointage{
     background-color: rgb(14, 79, 145);
     color: white;
@@ -200,7 +211,6 @@ input[type=password] {
     color: rgb(14, 79, 145);
     border: 1px solid rgb(14, 79, 145);
 }
-
 
 
 
