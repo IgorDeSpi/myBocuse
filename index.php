@@ -1,14 +1,8 @@
 <?php
-
 session_start();
-
-
 try
 {
-
-    
     $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-
 }
 catch (Exception $e)
 {
@@ -56,9 +50,6 @@ catch (Exception $e)
         if(!empty($_SESSION)){
             include('./Files_proteges/header_login_page.php'); 
             include('./Files_proteges/login_page.php');
-
-
-            // include('./Files_proteges/logout.php');
         }
         else {
             // Header 
@@ -67,13 +58,11 @@ catch (Exception $e)
             
             include('./Files_proteges/formulaire.php');
         }
-    
-
 include('./Files_proteges/footer.php')
 ?>
 
 
   
 </body>
-
+<script src="script.js"></script>
 </html>

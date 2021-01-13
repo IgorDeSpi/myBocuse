@@ -25,7 +25,7 @@
                 {
                 ?>
                 <div class="boxTitre">
-
+                    
                 <div ><?php echo $donnees['dateR'] ?></div>
                 <div ><?php echo $donnees['titre'] ?></div>
                 <div ><?php echo $donnees['contenu'] ?></div>
