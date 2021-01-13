@@ -27,14 +27,27 @@
         </div>
     </section>
     
-            <div class="flex">
-                <div class="box">
+                <div class="boxRecette">
+                
+                
+                <?php
+                $reponse = $bdd->query('SELECT * FROM recette ORDER BY dateR');
+                while($donnees = $reponse->fetch())
+                {
+                ?>
+                <div class="boxTitre">
+
+                <div ><?php echo $donnees['dateR'] ?></div>
+                <div ><?php echo $donnees['titre'] ?></div>
+                <div ><?php echo $donnees['contenu'] ?></div>
+                </div>
+                <?php
+                }         
+                $reponse->closeCursor(); // Termine le traitement de la requête
+                ?>
    
-            </div>
-                
-                <script>
-                
-                </script>
+
+             </div>
             </div>
     <section class="calendrier">
         <h2>Calendrier</h2>

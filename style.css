@@ -4,18 +4,9 @@
     font-family: 'Roboto', sans-serif;
     ;
 }
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-.box{
-    width: 100px;
-    height: 100px;
-    border: solid black 1px;
-    margin: 3px;
+
+.boxP{
+    width: 300px; 
 }
 
 /* Body */
@@ -25,7 +16,19 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+.boxRecette{
+    width: fit-content;
+    height: 500px;
+    margin: 0 auto;
+    overflow: auto;
 
+}
+.boxTitre{
+    border: solid black 1px;
+    width: 300px;
+    margin-bottom: 5px;
+    padding: 3px;
+}
 
 
 /* Titre My.Bocuse */

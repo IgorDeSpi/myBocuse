@@ -1,14 +1,4 @@
-<?php
-try
-{
-    
-    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-?>
+
 <section>
 <div class="main_container_recette">
     <form class="formulaire_recette" method="post">
@@ -31,6 +21,7 @@ catch (Exception $e)
             <tr>
                 <td></td>
                 <td><input type="submit" id="confirm_recette" value="Confirm" /> </td>
+               
             </tr>
         </table>
 
@@ -46,13 +37,10 @@ catch (Exception $e)
                                 $mail = $_SESSION['email'];
                                 $titre = $_POST['titre'];                           
                                 $recette = $_POST['recette'];
-                                $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette, email_recette) VALUES (NULL, ?, ?, ?, ?, ?)");
-                                $addRecette->execute(array($test,$date,$titre, $recette, $mail));
+                                $addRecette = $bdd->prepare("INSERT INTO recette (id,userID, dateR, titre, contenu) VALUES (NULL, ?, ?, ?, ?)");
+                                $addRecette->execute(array($test,$date,$titre, $recette));
                         }
                     }
         ?>
-<<<<<<< HEAD
+
     </section>
-=======
-</section>
->>>>>>> 645276a7d0477c0d27f13ba83d003a0e89b6d678
