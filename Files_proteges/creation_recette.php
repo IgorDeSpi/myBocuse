@@ -11,7 +11,7 @@ catch (Exception $e)
 ?>
 <section>
 <div class="main_container_recette">
-    <form class="formulaire_recette">
+    <form class="formulaire_recette" method="post">
 
         <h2 class="title">Ajouter une recette</h2>
         <table class="tableau_recette">
