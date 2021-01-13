@@ -5,7 +5,7 @@ session_start();
 try
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=my.bocuse;charset=utf8', 'root', '');
 
 }
 catch (Exception $e)

@@ -2,14 +2,14 @@
 try
 {
     
-    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 }
 catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
 ?>
-
+<section>
 <div class="main_container_recette">
     <form class="formulaire_recette">
 
@@ -51,3 +51,4 @@ catch (Exception $e)
                         }
                     }
         ?>
+</section>
