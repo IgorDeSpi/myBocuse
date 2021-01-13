@@ -1,5 +1,7 @@
 
+
 <section>
+
 <div class="main_container_recette">
     <form class="formulaire_recette" method="post">
 
@@ -29,6 +31,7 @@
 </div>
 
 <?php
+
                     if(isset($_POST['titre']) && isset($_POST['recette'])){
                         if(!empty($_POST['titre']) && !empty($_POST['recette'])){
                             // $titre = strip_tags(trim($_POST['titre']));
@@ -44,3 +47,4 @@
         ?>
 
     </section>
+
