@@ -7,11 +7,10 @@
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';  
         } else if($_SESSION['statut'] === 'learner'){
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';   // Peut afficher des choses en plus
-            
+            include('./Files_proteges/pointage.php');
+        }
             ?>
     </div>
-
-    <?php include('./Files_proteges/pointage.php') ?>
 
     <section class="calendrier">
         <h2>Calendrier</h2>
