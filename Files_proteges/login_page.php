@@ -10,25 +10,8 @@
             
             ?>
     </div>
-    <section class="pointage">
-        <div class="pointage1">
-            <h2>Pointage</h2>
-            <div class="pointage2">
-                <div class="heurepointage">
-                    <h3>Start</h3>
-                    <button id="bouton_pointage"> 9:00</button>
-                </div>
-                <div class="heurepointage">
-                    <h3>End</h3>
-                    <button id="bouton_pointage">17:00</button>
-                </div>
-            </div>
-        </div>
-    </section>
-            <?php
-         }
-        
-            ?>
+
+    <?php include('./Files_proteges/pointage.php') ?>
 
     <section class="calendrier">
         <h2>Calendrier</h2>
