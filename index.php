@@ -44,8 +44,6 @@ catch (Exception $e)
                 $_SESSION['prenom'] = $data['first_name'];
                 $_SESSION['nom'] = $data['last_name'];
                 $_SESSION['statut'] = $data['statut'];
-                
-
             }
             else if(['pass'])
             $request->closeCursor();

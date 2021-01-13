@@ -42,13 +42,16 @@ catch (Exception $e)
         </form>
         <?php
                     if(isset($_POST['titre']) && isset($_POST['recette'])){
-                        // $titre = strip_tags(trim($_POST['titre']));
-                            $date = $_POST['date'];
-                            $test = $_SESSION['id'];
-                            $titre = $_POST['titre'];                           
-                            $recette = $_POST['recette'];
-                            $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette) VALUES (NULL, ?, ?, ?, ?)");
-                            $addRecette->execute(array($test,$date,$titre, $recette));
+                        if(!empty($_POST['titre']) && !empty($_POST['recette'])){
+                            // $titre = strip_tags(trim($_POST['titre']));
+                                $date = $_POST['date'];
+                                $test = $_SESSION['id'];
+                                $mail = $_SESSION['email'];
+                                $titre = $_POST['titre'];                           
+                                $recette = $_POST['recette'];
+                                $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette, email_recette) VALUES (NULL, ?, ?, ?, ?, ?)");
+                                $addRecette->execute(array($test,$date,$titre, $recette, $mail));
+                        }
                     }
         ?>
     </section>

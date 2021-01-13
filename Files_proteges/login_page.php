@@ -7,6 +7,7 @@
         // echo "bonjour CHEF ! ";   <--- Peut afficher des choses en plus
     }
 ?>
+
     </div>
     <section class="pointage">
         <div class="pointage1">
@@ -23,8 +24,15 @@
             </div>
         </div>
     </section>
+    
             <div class="flex">
-                <div class="box">page 1 </div>
+                <div class="box">
+   
+            </div>
+                
+                <script>
+                
+                </script>
             </div>
     <section class="calendrier">
         <h2>Calendrier</h2>
