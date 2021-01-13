@@ -18,15 +18,15 @@ catch (Exception $e)
 
             <tr>
                 <td><label class="label">Nom de la recette</label></td>
-                <td><input class="nom_recette" id="name" type="text" name="" required></td>
+                <td><input class="nom_recette" id="name" type="text" name="titre" required></td>
             </tr>
             <tr>
                 <td><label class="label">Date</label></td>
-                <td><input class="date_recette" id="date" type="date" name="" required></td>
+                <td><input class="date_recette" id="date" type="date" name="date" required></td>
             </tr>
             <tr>
                 <td><label class="label">Description de la recette </label></td>
-                <td><textarea class="description" type="text" id='textarea' name="" required></textarea></td>
+                <td><textarea class="description" type="text" id='textarea' name="recette" required></textarea></td>
             </tr>
             <tr>
                 <td></td>
@@ -38,13 +38,16 @@ catch (Exception $e)
 </div>
 
 <?php
-    if(isset($_POST['titre']) && isset($_POST['recette'])){
-    // $titre = strip_tags(trim($_POST['titre']));
-        $date = $_POST['date'];
-        $test = $_SESSION['id'];
-        $titre = $_POST['titre'];                           
-        $recette = $_POST['recette'];
-        $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette) VALUES (NULL, ?, ?, ?, ?)");
-        $addRecette->execute(array($test,$date,$titre, $recette));
-    }
-?>
+                    if(isset($_POST['titre']) && isset($_POST['recette'])){
+                        if(!empty($_POST['titre']) && !empty($_POST['recette'])){
+                            // $titre = strip_tags(trim($_POST['titre']));
+                                $date = $_POST['date'];
+                                $test = $_SESSION['id'];
+                                $mail = $_SESSION['email'];
+                                $titre = $_POST['titre'];                           
+                                $recette = $_POST['recette'];
+                                $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette, email_recette) VALUES (NULL, ?, ?, ?, ?, ?)");
+                                $addRecette->execute(array($test,$date,$titre, $recette, $mail));
+                        }
+                    }
+        ?>
