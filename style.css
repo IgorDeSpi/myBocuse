@@ -330,3 +330,20 @@ input[type=password] {
 .footer>p:nth-child(2) {
     margin-bottom: 0px;
 }
+/*______________________________ CSS du tableau des Chefs______________________________________ */
+table{
+    margin: 0 auto;
+}
+.td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid grey 1px;
+    background-color: rgb(233, 232, 232);
+
+}
+.bolder{
+    font-weight: bolder;
+}
+/* ______________________________________________________________________________________________ */

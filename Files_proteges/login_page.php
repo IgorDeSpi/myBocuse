@@ -3,9 +3,11 @@
     <div class="pointage1">
         <?php   
         // echo 'Bienvenu ', $_SESSION['statut'],' ',$_SESSION['prenom'],' ',$_SESSION['nom'];
-        if($_SESSION['statut'] === 'chef'){
+        if($_SESSION['statut'] == 'Chef'){
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';  
-        } else if($_SESSION['statut'] === 'learner'){
+            include('./Files_proteges/regardPointage.php');
+
+        } else if($_SESSION['statut'] === 'Learner'){
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';   // Peut afficher des choses en plus
             include('./Files_proteges/pointage.php');
         }
