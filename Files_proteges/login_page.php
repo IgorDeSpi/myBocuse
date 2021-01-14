@@ -39,6 +39,7 @@
                             while($donnee = $recherche->fetch()){
 
                             echo $donnee['dateR'],'<br>';
+                            echo $donnee['titre'],'<br>';
                             echo $donnee['contenu'];
                             
                             }
