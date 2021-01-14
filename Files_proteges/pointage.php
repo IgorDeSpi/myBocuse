@@ -8,8 +8,10 @@
  $stopMatin = false;
  $stopSoir = false;
 
+
  $id = $_SESSION['id'];
  $jour = date('Y-m-d');
+
     
     $PointageMatin = $bdd->query("SELECT `id`,`jour`,`startTime`,`finish` FROM `pointage` WHERE $id");
     while($donnee = $PointageMatin->fetch())
@@ -29,7 +31,9 @@
                 $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
                 $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));             
             };     
+
         }   
+
         if($stopSoir === false){
         if(isset($_GET['pSoir'])){
                 $bdd->exec("UPDATE `pointage` SET `finish`= CURRENT_TIME WHERE $id ");

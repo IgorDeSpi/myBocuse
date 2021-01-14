@@ -2,7 +2,7 @@
 session_start();
 try
 {
-    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 }
 catch (Exception $e)
 {
@@ -35,7 +35,7 @@ catch (Exception $e)
             strip_tags(trim($_POST['email'])),
         ]);
         $data = $request ->fetch();
-            if($data['pass'] === $_POST['pwd']){
+            if($data['pass'] === sha1($_POST['pwd'])){
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['pass'] = $data['pass'];
@@ -54,13 +54,13 @@ catch (Exception $e)
 
             } 
 
-            } 
-            // else{
+            else{
         
-            //     echo '<div class="div_statut"><p class="no_status">No status has been assigned to you...</br>
-            //     Please disconnect and ask the chefs to assign you a status !!!</p></div>';
+                echo '<div class="div_statut"><p class="no_status">No status has been assigned to you...</br>
+                Please disconnect and ask the chefs to assign you a status !!!</p></div>';
                 
-            // }
+            }
+            } 
             else {
             // Header 
             include('./Files_proteges/header_formulaire.php'); 
