@@ -7,6 +7,7 @@
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';  
         } else if($_SESSION['statut'] === 'learner'){
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';   // Peut afficher des choses en plus
+<<<<<<< HEAD
         }
             else{
         
@@ -19,12 +20,20 @@
 
     <?php include('./Files_proteges/pointage.php') ?>
 
+=======
+            include('./Files_proteges/pointage.php');
+        }
+            ?>
+    </div>
+
+>>>>>>> fb75ed8a1b82571bd9d2b21e6fa8876d77d0cf89
     <section class="calendrier">
         <h2>Calendrier</h2>
 
     </section>
 
     <div class="flex">
+<<<<<<< HEAD
                 <div class="boxRecette">
 
                 <?php
@@ -51,6 +60,42 @@
             </div> 
 
 <?php include('./Files_proteges/creation_recette.php'); ?>
+=======
+        <?php include('./Files_proteges/calendrierRecette.php'); ?>
+        <div>   
+
+            <form action="" method="post">  
+            <input  type="date" name="dateP" value=<?php echo $jour; ?> required>
+            <input type="submit"  value="recherche"required>
+            </form>
+            
+        </div>
+            <div class="recetteDJ">
+                    RECETTE DU JOUR
+                <div>
+                <?php 
+            // if(isset($_POST["dateP"])){ 
+            //     $dateDemand = $_POST["dateP"];
+            //     print_r($dateDemand);
+            //     echo'<br>';
+            //     $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR');
+            //     $recherche->execution(array($dateDemand));
+
+            //     while($donnee = $recherche->fetch()){
+
+            //        echo $donnee['dateR'],'<br>';
+            //        echo $donnee['contenu'];
+                
+            //     }
+            //     $reponse->closeCursor();
+            // }
+            ?>
+                </div>
+            </div>
+        
+    </div>
+    <?php include('./Files_proteges/creation_recette.php'); ?>
+>>>>>>> fb75ed8a1b82571bd9d2b21e6fa8876d77d0cf89
 
 
 

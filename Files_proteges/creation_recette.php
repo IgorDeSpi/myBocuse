@@ -1,15 +1,7 @@
-<?php
-try
-{
-    
-    $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-?>
+
+
 <section>
+
 <div class="main_container_recette">
     <form class="formulaire_recette" method="post">
 
@@ -31,6 +23,7 @@ catch (Exception $e)
             <tr>
                 <td></td>
                 <td><input type="submit" id="confirm_recette" value="Confirm" /> </td>
+               
             </tr>
         </table>
 
@@ -38,17 +31,22 @@ catch (Exception $e)
 </div>
 
 <?php
-                    if(isset($_POST['titre']) && isset($_POST['recette'])){
-                        if(!empty($_POST['titre']) && !empty($_POST['recette'])){
-                            // $titre = strip_tags(trim($_POST['titre']));
-                                $date = $_POST['date'];
-                                $test = $_SESSION['id'];
-                                $mail = $_SESSION['email'];
-                                $titre = $_POST['titre'];                           
-                                $recette = $_POST['recette'];
-                                $addRecette = $bdd->prepare("INSERT INTO recette (id_recette,user_recette, date_recette, titre, recette, email_recette) VALUES (NULL, ?, ?, ?, ?, ?)");
-                                $addRecette->execute(array($test,$date,$titre, $recette, $mail));
-                        }
-                    }
-        ?>
-</section>
+
+
+    if(isset($_POST['titre']) && isset($_POST['recette'])){
+        header('Location: index.php');
+        if(!empty($_POST['titre']) && !empty($_POST['recette'])){
+        // $titre = strip_tags(trim($_POST['titre']));
+        $date = $_POST['date'];
+        $test = $_SESSION['id'];
+        $titre = strip_tags(trim($_POST['titre']));                           
+        $recette = strip_tags(trim($_POST['recette']));
+        $addRecette = $bdd->prepare("INSERT INTO recette (id,userID, dateR, titre, contenu) VALUES (NULL, ?, ?, ?, ?)");
+        $addRecette->execute(array($test,$date,$titre, $recette));
+        }
+    }    
+?>
+
+    </section>
+
+
