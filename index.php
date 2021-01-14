@@ -12,21 +12,22 @@ catch (Exception $e)
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/png" />
     <title>My.Bocuse</title>
-    
-    <link rel="icon" href="./img/favicon.ico" type="image/png" />
+
 </head>
 
 <body>
-<?php 
+    <?php 
     
     if(isset($_POST['email'])&& isset($_POST['pwd'])){
      
@@ -71,7 +72,8 @@ include('./Files_proteges/footer.php')
 ?>
 
 
-  
+
 </body>
 <script src="script.js"></script>
+
 </html>
