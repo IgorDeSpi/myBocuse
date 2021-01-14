@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include ('./Files_proteges/secret.php');
+
 try
 {
     $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
@@ -21,7 +24,7 @@ catch (Exception $e)
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
     
     <title>My.Bocuse</title>
-    
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
 </head>
 
@@ -35,7 +38,7 @@ catch (Exception $e)
             strip_tags(trim($_POST['email'])),
         ]);
         $data = $request ->fetch();
-            if($data['pass'] === $_POST['pwd']){
+        if(password_verify($_POST['password'], $data['password'])){
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['pass'] = $data['pass'];

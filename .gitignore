@@ -1,3 +1,4 @@
 .htaccess
 .htpasswd
-pwd_hash.php
+secret.php
+user.php
