@@ -4,7 +4,11 @@
     font-family: 'Roboto', sans-serif;
     ;
 }
-
+/* html{
+    background-image: url(./image/fond.jpg) ;
+    background-repeat: repeat;
+    background-size:cover ;
+} */
 .boxP{
     width: 300px; 
 }
@@ -19,25 +23,44 @@ body {
 .boxRecette{
     width: fit-content;
     height: 500px;
+    overflow: hidden;
+    max-width: 420px;
+    min-width: 400px;
+}
+.boxRecette:hover{
     overflow: auto;
-
 }
 .boxTitre{
-    border: solid black 1px;
     width: 400px;
     margin-bottom: 5px;
-    padding: 3px;
+    padding: 10px;
+}
+
+.calendrierDate{
+    background-color: rgb(228, 204, 204);
+    padding: 5px;
+}
+.calendrierTitre{
+    background-color: red ;
+}
+.calendrierContenu{
+    background-color: rgb(235, 235, 235);
 }
 .flex{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .recetteDJ{
-    width: 500px;
+    width: 406px;
     height: 500px;
     border: solid black 1px;
+    padding: 10px;
 }
-
+.pointMatin{
+    width: fit-content
+    ;
+}
 
 /* Titre My.Bocuse */
 .bocuse_title {
@@ -103,7 +126,6 @@ input[type=password] {
 
 /* Pointage */
 .pointage {
-    border: 3px solid #fff;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -127,7 +149,18 @@ input[type=password] {
     display: flex;
     justify-content: center;
 }
+.no_status{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
 
+.div_statut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
 #bouton_pointage{
     background-color: rgb(14, 79, 145);
     color: white;
@@ -200,7 +233,6 @@ input[type=password] {
     color: rgb(14, 79, 145);
     border: 1px solid rgb(14, 79, 145);
 }
-
 
 
 

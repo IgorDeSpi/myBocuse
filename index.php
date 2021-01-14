@@ -1,15 +1,8 @@
 <?php
-
 session_start();
-
-
-
 try
 {
-
-    
     $bdd = new PDO("mysql:host=localhost;dbname=my.bocuse;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-
 }
 catch (Exception $e)
 {
@@ -52,34 +45,33 @@ catch (Exception $e)
             }
             else if(['pass'])
             $request->closeCursor();
-            
-            
-
-            
-            
-    }
+        }
 
         if(!empty($_SESSION)){
-            include('./Files_proteges/header_login_page.php'); 
-            include('./Files_proteges/login_page.php');
+            include('./Files_proteges/header_login_page.php');
+            if($_SESSION['statut'] === 'chef' || $_SESSION['statut'] === 'learner'){
+                include('./Files_proteges/login_page.php'); 
 
+            } 
 
-            // include('./Files_proteges/logout.php');
-        }
-        else {
+            } 
+            // else{
+        
+            //     echo '<div class="div_statut"><p class="no_status">No status has been assigned to you...</br>
+            //     Please disconnect and ask the chefs to assign you a status !!!</p></div>';
+                
+            // }
+            else {
             // Header 
             include('./Files_proteges/header_formulaire.php'); 
             // Main 
-            
             include('./Files_proteges/formulaire.php');
         }
-    
-
 include('./Files_proteges/footer.php')
 ?>
 
 
   
 </body>
-
+<script src="script.js"></script>
 </html>
