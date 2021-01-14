@@ -22,40 +22,34 @@
         <div>   
 
             <form action="" method="post">  
-            <input  type="date" name="dateP" value=<?php 
-            if($_SESSION['statut'] === 'learner'){
-                echo $jour;
-            }
-              ?> required>
+            <input  type="date" name="dateP" value=<?php if($_SESSION['statut'] === 'learner'){ echo $jour; }?> required>
             <input type="submit"  value="recherche"required>
             </form>
             
         </div>
+        <!-- contenu des recettes choisis -->
             <div class="recetteDJ">
-                    RECETTE DU JOUR
-                <div>
-                <?php 
-            if(isset($_POST["dateP"])){ 
-                $dateDemand = $_POST["dateP"];
-                print_r($dateDemand);
-                echo'<br>';
-                $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR=?');
-                $recherche->execution(array([$dateDemand]));
-                while($donnee = $recherche->fetch()){
+                    <div>
+                    <?php 
+                        if(isset($_POST["dateP"])){ 
+                            $dateDemand = $_POST["dateP"];
+                            echo'<br>';
+                            $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR=?');
+                            $recherche->execute([$dateDemand]);
+                            while($donnee = $recherche->fetch()){
 
-                   echo $donnee['dateR'],'<br>';
-                   echo $donnee['contenu'];
-                
-                }
-                $reponse->closeCursor();
-            }
-            ?>
-                </div>
+                            echo $donnee['dateR'],'<br>';
+                            echo $donnee['titre'],'<br>';
+                            echo $donnee['contenu'];
+                            
+                            }
+                            $reponse->closeCursor();
+                        }
+                    ?>
+                    </div>
             </div>
         
     </div>
     <?php include('./Files_proteges/creation_recette.php'); ?>
-
-
 
 </main>

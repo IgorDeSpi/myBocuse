@@ -1,10 +1,7 @@
 const point = document.querySelector(".pointMatin")
 const point2 = document.querySelector(".pointSoir")
 const boutonPointage = document.getElementById("bouton_pointage")
-boutonPointage.addEventListener("click",function(){
-    window.location = "";
-    alert("Pointage du matin réussi");
-})
+
 let inter = false;
 
 if (point.textContent == "pointMatin") {

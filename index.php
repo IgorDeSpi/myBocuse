@@ -38,7 +38,7 @@ catch (Exception $e)
             strip_tags(trim($_POST['email'])),
         ]);
         $data = $request ->fetch();
-        if(password_verify($_POST['password'], $data['password'])){
+            if($data['pass'] === sha1($_POST['pwd'])){
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['pass'] = $data['pass'];
@@ -57,13 +57,13 @@ catch (Exception $e)
 
             } 
 
-            } 
-            // else{
+            else{
         
             //     echo '<div class="div_statut"><p class="no_status">No status has been assigned to you...</br>
             //     Please disconnect and ask the chefs to assign you a status !!!</p></div>';
                 
-            // }
+            }
+            } 
             else {
             // Header 
             include('./Files_proteges/header_formulaire.php'); 
