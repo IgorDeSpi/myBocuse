@@ -1,4 +1,6 @@
 <?php
+
+
  $heureDepart = "9:00";
  $heureDeFin = "17:00";
  $matin = "";
@@ -6,8 +8,8 @@
  $stopMatin = false;
  $stopSoir = false;
 
-    $id = $_SESSION['id'];
-    $jour = date('Y-m-d');
+ $id = $_SESSION['id'];
+ $jour = date('Y-m-d');
     
     $PointageMatin = $bdd->query("SELECT `id`,`jour`,`startTime`,`finish` FROM `pointage` WHERE $id");
     while($donnee = $PointageMatin->fetch())
