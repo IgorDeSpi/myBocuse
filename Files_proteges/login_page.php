@@ -13,7 +13,7 @@
     </div>
 
     <section class="calendrier">
-        <h2>Calendrier</h2>
+        <h2>THE RECETTE Calendar</h2>
         <div>   
 
             <form action="" method="post">  
