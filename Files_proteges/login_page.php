@@ -21,7 +21,7 @@
         <div>   
 
             <form action="" method="post">  
-            <input  type="date" name="dateP" value=<?php if($_SESSION['statut'] === 'learner'){ echo $jour; }?> required>
+            <input  type="date" name="dateP" value=<?php if($_SESSION['statut'] === 'Learner'){ echo $jour; }?> required>
             <input type="submit"  value="recherche"required>
             </form>
             
