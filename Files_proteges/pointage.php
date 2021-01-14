@@ -8,10 +8,7 @@
 
  $id = $_SESSION['id'];
  $jour = date('Y-m-d');
-
- echo $jour;
-
-    
+  
     // $PointageMatin = $bdd->prepare("SELECT `id`,`jour`,`startTime`,`finish` FROM `pointage` WHERE id=?");
     $PointageMatin = $bdd->prepare("SELECT `jour`,`startTime` FROM `pointage` WHERE user=? AND jour=?");
     $PointageMatin->execute(array($id,date('Y-m-d')));
@@ -25,9 +22,11 @@
                   echo "Pointé à $timestamp ";
                   $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
                   $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));
-                  $matin = "pointMatin";
+                  
                   $heureDepart = $timestamp;
               };  
+          }else{
+            $matin = "pointMatin";
           }
           $PointageSoir = $bdd->prepare("SELECT `finish` FROM `pointage` WHERE user=? AND jour=?");
           $PointageSoir->execute(array($id,date('Y-m-d')));
