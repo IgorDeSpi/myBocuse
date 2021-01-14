@@ -48,7 +48,7 @@ catch (Exception $e)
 
         if(!empty($_SESSION)){
             include('./Files_proteges/header_login_page.php');
-            if($_SESSION['statut'] === 'chef' || $_SESSION['statut'] === 'learner'){
+            if($_SESSION['statut'] === 'Chef' || $_SESSION['statut'] === 'Learner'){
                 include('./Files_proteges/login_page.php'); 
 
             } 
