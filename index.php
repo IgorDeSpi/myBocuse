@@ -21,7 +21,7 @@ catch (Exception $e)
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
     <title>My.Bocuse</title>
     
-    <link rel="icon" href="./img/favicon.ico" type="image/png" />
+    <link rel="icon" href="./favicon.ico" type="image/png" />
 </head>
 
 <body>
@@ -48,7 +48,7 @@ catch (Exception $e)
 
         if(!empty($_SESSION)){
             include('./Files_proteges/header_login_page.php');
-            if($_SESSION['statut'] === 'chef' || $_SESSION['statut'] === 'learner'){
+            if($_SESSION['statut'] === 'Chef' || $_SESSION['statut'] === 'Learner'){
                 include('./Files_proteges/login_page.php'); 
 
             } 
