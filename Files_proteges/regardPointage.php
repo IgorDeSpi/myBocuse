@@ -9,6 +9,7 @@ while($donnees = $quiAPointe->fetch())
     $fin = $donnees['finish'];
     $date = $donnees['jour'];
 }
+$quiAPointe->closeCursor(); 
 ?>
 <table class="tablePersonne">
     <tr class="bolder">

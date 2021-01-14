@@ -6,7 +6,7 @@
 
         if($_SESSION['statut'] == 'Chef'){
             echo 'Bonjour ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' ! ';  
-            include('./Files_proteges/regardPointage.php');
+            // include('./Files_proteges/regardPointage.php');
 
 
         } else if($_SESSION['statut'] === 'Learner'){
