@@ -1,9 +1,17 @@
 <?php
+
+
  $heureDepart = "9:00";
  $heureDeFin = "17:00";
+ $matin = "";
+ $soir ="";
+ $stopMatin = false;
+ $stopSoir = false;
 
-    $id = $_SESSION['id'];
-    $jour = date('Y-m-d');
+
+ $id = $_SESSION['id'];
+ $jour = date('Y-m-d');
+
     
     $PointageMatin = $bdd->query("SELECT `id`,`jour`,`startTime`,`finish` FROM `pointage` WHERE $id");
     while($donnee = $PointageMatin->fetch())
@@ -23,9 +31,9 @@
                 $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
                 $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));             
             };     
-        }
-       
-        $stopSoir = false;
+
+        }   
+
         if($stopSoir === false){
         if(isset($_GET['pSoir'])){
                 $bdd->exec("UPDATE `pointage` SET `finish`= CURRENT_TIME WHERE $id ");
@@ -36,16 +44,12 @@
                             $stopSoir = true; 
                             $heureDeFin = $donnee['finish'] ;
                             header("index.php"); 
-                            $soir = "pointSoir"; 
-                             
-                            
+                            $soir = "pointSoir";                         
                     }
         }
         $PointageMatin->closeCursor(); 
     }
 }
-
-        
     ?>
 <section class="pointage">
         <div class="pointage1">
@@ -64,8 +68,6 @@
             </div>
         </div>
     </section>
-
-
     <div class="pointMatin"><?php echo $matin; ?></div>
     <div class="pointSoir"><?php echo $soir; ?></div>
     
