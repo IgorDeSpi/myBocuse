@@ -19,6 +19,7 @@ catch (Exception $e)
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <title>My.Bocuse</title>
     
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
