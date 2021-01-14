@@ -2,6 +2,12 @@
  $heureDepart = "9:00";
  $heureDeFin = "17:00";
 
+ $matin = "";
+ $soir ="";
+
+ $stopMatin = false;
+ $stopSoir = false;
+
     $id = $_SESSION['id'];
     $jour = date('Y-m-d');
     
@@ -25,7 +31,7 @@
             };     
         }
        
-        $stopSoir = false;
+        
         if($stopSoir === false){
         if(isset($_GET['pSoir'])){
                 $bdd->exec("UPDATE `pointage` SET `finish`= CURRENT_TIME WHERE $id ");
