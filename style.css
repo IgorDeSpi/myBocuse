@@ -149,6 +149,7 @@ input[type=password] {
     display: flex;
     justify-content: center;
 }
+
 .no_status{
     text-align: center;
     font-size: large;
@@ -161,6 +162,7 @@ input[type=password] {
     justify-content: center;
     color: red;
 }
+
 #bouton_pointage{
     background-color: rgb(14, 79, 145);
     color: white;
