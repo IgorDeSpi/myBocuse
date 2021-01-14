@@ -5,9 +5,12 @@
  $matin = "";
  $soir ="";
 
+
  $id = $_SESSION['id'];
  $jour = date('Y-m-d');
+
  echo $jour;
+
     
     // $PointageMatin = $bdd->prepare("SELECT `id`,`jour`,`startTime`,`finish` FROM `pointage` WHERE id=?");
     $PointageMatin = $bdd->prepare("SELECT `jour`,`startTime` FROM `pointage` WHERE user=? AND jour=?");
@@ -18,6 +21,7 @@
               if(isset($_POST['pMatin'])){
                 //   header("Location: index.php");
                 $timestamp = date('h:i:s'); 
+
                   echo "Pointé à $timestamp ";
                   $addTime = $bdd->prepare("INSERT INTO `pointage` (`id`, `user`, `jour`, `startTime`, `finish`) VALUES (NULL, $id, CURRENT_DATE, CURRENT_TIME, '')");
                   $addTime->execute(array(NULL, $id, 'CURRENT_DATE', 'CURRENT_TIME', ''));
@@ -45,6 +49,7 @@
                         }
                 }
             // }
+
 
 
     ?>
