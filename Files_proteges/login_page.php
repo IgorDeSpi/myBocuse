@@ -14,11 +14,6 @@
 
     <section class="calendrier">
         <h2>Calendrier</h2>
-
-    </section>
-
-    <div class="flex">
-        <?php include('./Files_proteges/calendrierRecette.php'); ?>
         <div>   
 
             <form action="" method="post">  
@@ -27,6 +22,11 @@
             </form>
             
         </div>
+    </section>
+
+    <div class="flex">
+        <?php include('./Files_proteges/calendrierRecette.php'); ?>
+
         <!-- contenu des recettes choisis -->
             <div class="recetteDJ">
                     <div>
@@ -37,15 +37,24 @@
                             $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR=?');
                             $recherche->execute([$dateDemand]);
                             while($donnee = $recherche->fetch()){
-
-                            echo $donnee['dateR'],'<br>';
-                            echo $donnee['titre'],'<br>';
-                            echo $donnee['contenu'];
-                            
+                                    
+                            $date = $donnee['dateR'];
+                            $titre = $donnee['titre'];
+                            $contenu = $donnee['contenu'];
+                            echo '<div class="dateRecette">', $date ,'</div>';
+                            echo '<div class="dateRecette">', $titre, '</div>';
+                            echo '<div class="contenuRecette">', $contenu ,'</div>';
                             }
                             $reponse->closeCursor();
                         }
-                    ?>
+                
+                        ?>
+
+                    
+                    
+                    
+                  
+
                     </div>
             </div>
         
