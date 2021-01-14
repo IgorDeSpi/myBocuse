@@ -35,9 +35,8 @@
             //     $dateDemand = $_POST["dateP"];
             //     print_r($dateDemand);
             //     echo'<br>';
-            //     $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR');
-            //     $recherche->execution(array($dateDemand));
-
+            //     $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR=?');
+            //     $recherche->execution(array([$dateDemand]));
             //     while($donnee = $recherche->fetch()){
 
             //        echo $donnee['dateR'],'<br>';
