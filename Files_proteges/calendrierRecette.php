@@ -7,8 +7,8 @@
     ?>
 <div class="boxTitre">
 
-    <div class="calendrierDate"><?php echo  $donnees['dateR'] ,' | ', $donnees['titre']  ;?></div>
-    <div class="calendrierContenu"><?php echo '<br>', $donnees['contenu']; ?></div>
+    <div class="calendrierDate"><?php echo  $donnees['dateR'] ,' | ',$donnees['userID'] , ' <br> ' , $donnees['titre']  ;?></div>
+    <div class="calendrierContenu"></div>
 </div>
 <?php
     }         
