@@ -30,6 +30,9 @@ The following features are present :
 As we're working in groups, we split the work between front end and backend. 
 First, we split the front end between two groups of two; the login page and the general page. After the bases and style is done, we'll start with the backend information as well as the database. 
 
+## Databases
+
+![database](./database.png)
 ## What did we use ? 
 
 * HTML/CSS
