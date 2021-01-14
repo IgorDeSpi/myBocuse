@@ -65,7 +65,11 @@
         <div>   
 
             <form action="" method="post">  
-            <input  type="date" name="dateP" value=<?php echo $jour; ?> required>
+            <input  type="date" name="dateP" value=<?php 
+            if($_SESSION['statut'] === 'learner'){
+                echo $jour;
+            }
+              ?> required>
             <input type="submit"  value="recherche"required>
             </form>
             
@@ -74,21 +78,20 @@
                     RECETTE DU JOUR
                 <div>
                 <?php 
-            // if(isset($_POST["dateP"])){ 
-            //     $dateDemand = $_POST["dateP"];
-            //     print_r($dateDemand);
-            //     echo'<br>';
-            //     $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR');
-            //     $recherche->execution(array($dateDemand));
+            if(isset($_POST["dateP"])){ 
+                $dateDemand = $_POST["dateP"];
+                print_r($dateDemand);
+                echo'<br>';
+                $recherche = $bdd->prepare('SELECT * FROM recette WHERE dateR=?');
+                $recherche->execution(array([$dateDemand]));
+                while($donnee = $recherche->fetch()){
 
-            //     while($donnee = $recherche->fetch()){
-
-            //        echo $donnee['dateR'],'<br>';
-            //        echo $donnee['contenu'];
+                   echo $donnee['dateR'],'<br>';
+                   echo $donnee['contenu'];
                 
-            //     }
-            //     $reponse->closeCursor();
-            // }
+                }
+                $reponse->closeCursor();
+            }
             ?>
                 </div>
             </div>
