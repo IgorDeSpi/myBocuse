@@ -2,7 +2,8 @@
 
 made by [Florian BERTCHI](https://github.com/Bruxellesflorian), [Bérengère CARPENTIER](https://github.com/carpentierberengere), [Elise MULUMBA](https://github.com/elisemlbr) & [Igor DE SPIRLET](https://github.com/IgorDeSpi), trainees @ :office: Becode.
 
-:green_apple: start date : 11/01/2021, 9am. 
+:green_apple: start date : 11/01/2021, 9am.  
+
 :green_apple: end date : 14/01/2021, 7pm. 
 
 # my.Bocuse - what is it ?
