@@ -31,8 +31,6 @@
 </div>
 
 <?php
-
-
     if(isset($_POST['titre']) && isset($_POST['recette'])){
         header('Location: index.php');
         if(!empty($_POST['titre']) && !empty($_POST['recette'])){
@@ -41,8 +39,8 @@
         $test = $_SESSION['id'];
         $titre = strip_tags(trim($_POST['titre']));                           
         $recette = strip_tags(trim($_POST['recette']));
-        $addRecette = $bdd->prepare("INSERT INTO recette (id,userID, dateR, titre, contenu) VALUES (NULL, ?, ?, ?, ?)");
-        $addRecette->execute(array($test,$date,$titre, $recette));
+        $addRecette = $bdd->prepare("INSERT INTO recette (id,userID, dateR, titre, contenu,nom,prenom) VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+        $addRecette->execute(array($test,$date,$titre, $recette,$_SESSION['nom'],$_SESSION['prenom']));
         }
     }    
 ?>
