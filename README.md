@@ -8,6 +8,8 @@ made by [Florian BERTCHI](https://github.com/Bruxellesflorian), [Bérengère CAR
 
 :green_apple: end date : 14/01/2021, 7pm. 
 
+Link to our group's [**TRELLO**](https://trello.com/b/yLfuWgWr/mybocuse) 
+
 # my.Bocuse - what is it ?
 myBocuse is the website for learners and chefs of the Bocuse's cooking bootcamp.
 
