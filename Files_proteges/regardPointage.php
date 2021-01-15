@@ -15,9 +15,9 @@ while($donnees = $quiAPointe->fetch())
  <tr>
     <td class="td"><?php echo '<br>',$donnees['nomP']; ?></td>
     <td class="td"><?php echo '<br>',$donnees['prenomP'] ?></td>
+    <td class="td"><?php echo '<br>',$donnees['jour'] ?></td>
     <td class="td"><?php echo '<br>',$donnees['startTime'] ?></td>
     <td class="td"><?php echo '<br>',$donnees['finish'] ?></td>
-    <td class="td"><?php echo '<br>',$donnees['jour'] ?></td>
   </tr>  
 
 
