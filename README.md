@@ -1,4 +1,5 @@
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+
 # Fullstack Group Project - my.Bocuse
 
 made by [Florian BERTCHI](https://github.com/Bruxellesflorian), [Bérengère CARPENTIER](https://github.com/carpentierberengere), [Elise MULUMBA](https://github.com/elisemlbr) & [Igor DE SPIRLET](https://github.com/IgorDeSpi), trainees @ :office: Becode.
